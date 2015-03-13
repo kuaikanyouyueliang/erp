@@ -1,7 +1,10 @@
-bin/
-bin-debug/
-bin-release/
-.settings/
+#过滤不需要的文件 / 根目录下，对应的文件夹即可；
+/bin
+/bin-debug
+/bin-release
+/.settings
 /build
-.* 
-*.MF
+.*
+/WebRoot/WEB-INF/classes
+/WebRoot/logs
+/WebRoot/META-INF
