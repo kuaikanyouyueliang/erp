@@ -189,7 +189,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					title : '添加公司',
 					width : 600,
 					height : 400,
-					href : 'jsp/company/companyEditDlg.jsp',
+					href : "jsp/company/companyEditDlg.jsp",
 					buttons : [ {
 						text : '保存',
 						iconCls : 'icon-ok',

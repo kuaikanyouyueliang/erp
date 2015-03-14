@@ -41,7 +41,7 @@ public class PublicDaoImpl<T> implements PublicDao<T> {
 	
 	public Serializable save(T o) {
 		Serializable serializable = this.getCurrentSession().save(o);
-		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_INSERT, Constants.LOGS_INSERT_TEXT, Constants.LOGS_INSERT_NAME);
+//		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_INSERT, Constants.LOGS_INSERT_TEXT, Constants.LOGS_INSERT_NAME);
 		return serializable;
 	}
 
@@ -51,12 +51,12 @@ public class PublicDaoImpl<T> implements PublicDao<T> {
 
 	public void update(T o) {
 		this.getCurrentSession().update(o);
-		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_UPDATE, Constants.LOGS_UPDATE_TEXT, Constants.LOGS_UPDATE_NAME);
+//		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_UPDATE, Constants.LOGS_UPDATE_TEXT, Constants.LOGS_UPDATE_NAME);
 	}
 	
 	public void deleteToUpdate(T o) {
 		this.getCurrentSession().update(o);
-		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_DELETE, Constants.LOGS_DELETE_TEXT, Constants.LOGS_DELETE_NAME);
+//		Constants.getLogs(this.getCurrentSession(), o, Constants.LOGS_DELETE, Constants.LOGS_DELETE_TEXT, Constants.LOGS_DELETE_NAME);
 	}
 
 	public void saveOrUpdate(T o) {
