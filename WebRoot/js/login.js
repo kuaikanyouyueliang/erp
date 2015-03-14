@@ -7,12 +7,12 @@ $(document).ready(function() {
 	});
 	$('#login').show().animate({
 		opacity : 1
-	}, 2000);
+	}, 100);//修改了往下的3个时间显示，登陆页面的显示太慢了，但具体怎么控制不知道，时间就全部改了;
 	$('.logo').show().animate({
 		opacity : 1,
 		top : '32%'
-	}, 800, function() {
-		$('.logo').show().delay(1200).animate({
+	}, 100, function() {
+		$('.logo').show().delay(100).animate({
 			opacity : 1,
 			top : '1%'
 		}, 300, function() {

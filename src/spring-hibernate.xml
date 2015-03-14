@@ -131,7 +131,7 @@
     	</property> 
 	    <property name="filterChainDefinitions"> 
 	       <value>
-	         /Kaptcha.jpg = anon 
+	         <!-- /Kaptcha.jpg = anon  --><!-- 这个是控制输入验证码的，不知道为什么去掉就可以了 -->
 	       	 /js/** = anon  
 	       	 /css/** = anon  
 	       	 /extend/** = anon
