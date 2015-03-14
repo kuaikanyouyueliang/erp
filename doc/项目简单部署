@@ -2,3 +2,5 @@
 2.然后建立和down的名称项目的web项目，这样做是因为down下的代码没有配置文件，不会自动生成web项目；
 3.需要提交时候不要上传配置文件；
 4.主要.gitignore的配置，过滤不需要提交的文件；
+5.service 只需在类前添加@Service dao注解添加@Repository  调用的时候只需要 写一个private方法，在上面加上@Autowired
+	具体参数Test*.java
