@@ -66,5 +66,6 @@
 		<global-exception-mappings>
 			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
 		</global-exception-mappings>
-	</package> 
+	</package>
+	<include file="struts/struts-test.xml"/> 
 </struts>

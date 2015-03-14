@@ -5,4 +5,7 @@
 5,把项目导入到myeclipse中部署到容器中启动
 6,推荐使用google或是firefox浏览器，获取更快地响应速度 
 7,闲来没事做的项目，bug勿喷，不喜绕道！！
+8.service 只需在类前添加@Service dao注解添加@Repository  调用的时候只需要 写一个private方法，在上面加上@Autowired
+	具体参数Test*.java
+
 
