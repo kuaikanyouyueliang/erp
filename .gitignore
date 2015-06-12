@@ -23,6 +23,7 @@ hs_err_pid*
 /WebRoot/META-INF
 /target
 /zygl.iml
+/out
 
 
 # IntelliJ IDEA Files #
