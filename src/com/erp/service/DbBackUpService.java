@@ -10,21 +10,20 @@ import com.erp.model.BackupScheduleConfig;
 import com.erp.model.Log;
 import com.erp.util.PageUtil;
 
-public interface DbBackUpService extends ApplicationListener<ContextRefreshedEvent>
-{
+public interface DbBackUpService extends ApplicationListener<ContextRefreshedEvent> {
 
-	List<Log> findLogsAllList(Map<String, Object> map, PageUtil pageUtil );
+    List<Log> findLogsAllList(Map<String, Object> map, PageUtil pageUtil);
 
-	Long getCount(Map<String, Object> map, PageUtil pageUtil );
+    Long getCount(Map<String, Object> map, PageUtil pageUtil);
 
-	String unSchedule();
+    String unSchedule();
 
-	String schedule(int hour, int minute, String scheduleEnabled );
+    String schedule(int hour, int minute, String scheduleEnabled);
 
-	boolean handSchedule();
+    boolean handSchedule();
 
-	boolean addLog(String path, String fileName, boolean isSystem );
+    boolean addLog(String path, String fileName, boolean isSystem);
 
-	BackupScheduleConfig getBackupScheduleConfig();
+    BackupScheduleConfig getBackupScheduleConfig();
 
 }

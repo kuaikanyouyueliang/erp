@@ -1,6 +1,5 @@
 package com.erp.viewModel;
 
-public class PermissionModel
-{
+public class PermissionModel {
 
 }

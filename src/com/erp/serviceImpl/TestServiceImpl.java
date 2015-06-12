@@ -10,12 +10,12 @@ import com.erp.model.City;
 import com.erp.service.TestService;
 
 @Service
-public class TestServiceImpl implements TestService{
-	@Autowired
-	private TestDao testDao;
+public class TestServiceImpl implements TestService {
+    @Autowired
+    private TestDao testDao;
 
-	public List<City> findCityAll() {
-		List<City> list=testDao.findCityAll();
-		return list;
-	}
+    public List<City> findCityAll() {
+        List<City> list = testDao.findCityAll();
+        return list;
+    }
 }

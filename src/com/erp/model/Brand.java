@@ -19,115 +19,103 @@ import org.hibernate.annotations.DynamicUpdate;
 @Table(name = "BRAND", catalog = "ERP")
 @DynamicUpdate(true)
 @DynamicInsert(true)
-public class Brand implements java.io.Serializable
-{
-	private static final long serialVersionUID = 7957634034245022016L;
-	private Integer brandId;
-	private String name;
-	private Date created;
-	private Date lastmod;
-	private String status;
-	private Integer creater;
-	private Integer modifyer;
+public class Brand implements java.io.Serializable {
+    private static final long serialVersionUID = 7957634034245022016L;
+    private Integer brandId;
+    private String name;
+    private Date created;
+    private Date lastmod;
+    private String status;
+    private Integer creater;
+    private Integer modifyer;
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public Brand()
-	{
-	}
-	/** full constructor */
-	public Brand(String name, Date created, Date lastmod, String status, Integer creater,
-			Integer modifyer)
-	{
-		this.name = name;
-		this.created = created;
-		this.lastmod = lastmod;
-		this.status = status;
-		this.creater = creater;
-		this.modifyer = modifyer;
-	}
+    /**
+     * default constructor
+     */
+    public Brand() {
+    }
 
-	// Property accessors
-	@Id
-	@GeneratedValue
-	@Column(name = "BRAND_ID", unique = true, nullable = false)
-	public Integer getBrandId()
-	{
-		return this.brandId;
-	}
+    /**
+     * full constructor
+     */
+    public Brand(String name, Date created, Date lastmod, String status, Integer creater,
+                 Integer modifyer) {
+        this.name = name;
+        this.created = created;
+        this.lastmod = lastmod;
+        this.status = status;
+        this.creater = creater;
+        this.modifyer = modifyer;
+    }
 
-	public void setBrandId(Integer brandId )
-	{
-		this.brandId = brandId;
-	}
+    // Property accessors
+    @Id
+    @GeneratedValue
+    @Column(name = "BRAND_ID", unique = true, nullable = false)
+    public Integer getBrandId() {
+        return this.brandId;
+    }
 
-	@Column(name = "NAME", length = 200)
-	public String getName()
-	{
-		return this.name;
-	}
+    public void setBrandId(Integer brandId) {
+        this.brandId = brandId;
+    }
 
-	public void setName(String name )
-	{
-		this.name = name;
-	}
+    @Column(name = "NAME", length = 200)
+    public String getName() {
+        return this.name;
+    }
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "CREATED", length = 10)
-	public Date getCreated()
-	{
-		return this.created;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setCreated(Date created )
-	{
-		this.created = created;
-	}
+    @Temporal(TemporalType.DATE)
+    @Column(name = "CREATED", length = 10)
+    public Date getCreated() {
+        return this.created;
+    }
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "LASTMOD", length = 10)
-	public Date getLastmod()
-	{
-		return this.lastmod;
-	}
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 
-	public void setLastmod(Date lastmod )
-	{
-		this.lastmod = lastmod;
-	}
+    @Temporal(TemporalType.DATE)
+    @Column(name = "LASTMOD", length = 10)
+    public Date getLastmod() {
+        return this.lastmod;
+    }
 
-	@Column(name = "STATUS", length = 1)
-	public String getStatus()
-	{
-		return this.status;
-	}
+    public void setLastmod(Date lastmod) {
+        this.lastmod = lastmod;
+    }
 
-	public void setStatus(String status )
-	{
-		this.status = status;
-	}
+    @Column(name = "STATUS", length = 1)
+    public String getStatus() {
+        return this.status;
+    }
 
-	@Column(name = "CREATER")
-	public Integer getCreater()
-	{
-		return this.creater;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	public void setCreater(Integer creater )
-	{
-		this.creater = creater;
-	}
+    @Column(name = "CREATER")
+    public Integer getCreater() {
+        return this.creater;
+    }
 
-	@Column(name = "MODIFYER")
-	public Integer getModifyer()
-	{
-		return this.modifyer;
-	}
+    public void setCreater(Integer creater) {
+        this.creater = creater;
+    }
 
-	public void setModifyer(Integer modifyer )
-	{
-		this.modifyer = modifyer;
-	}
+    @Column(name = "MODIFYER")
+    public Integer getModifyer() {
+        return this.modifyer;
+    }
+
+    public void setModifyer(Integer modifyer) {
+        this.modifyer = modifyer;
+    }
 
 }

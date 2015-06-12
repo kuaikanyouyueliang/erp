@@ -7,17 +7,16 @@ import com.erp.model.OrderSale;
 import com.erp.model.OrderSaleLine;
 import com.erp.util.PageUtil;
 
-public interface OrderSaleService
-{
+public interface OrderSaleService {
 
-	boolean delOrderSale(Integer orderSaleId );
+    boolean delOrderSale(Integer orderSaleId);
 
-	boolean persistenceOrderSale(OrderSale c, Map<String, List<OrderSaleLine>> map );
+    boolean persistenceOrderSale(OrderSale c, Map<String, List<OrderSaleLine>> map);
 
-	Long getCount(Map<String, Object> param, PageUtil pageUtil );
+    Long getCount(Map<String, Object> param, PageUtil pageUtil);
 
-	List<OrderSale> findOrderSaleList(Map<String, Object> param, PageUtil pageUtil );
+    List<OrderSale> findOrderSaleList(Map<String, Object> param, PageUtil pageUtil);
 
-	List<OrderSaleLine> findOrderSaleLineList(Integer orderSaleId );
+    List<OrderSaleLine> findOrderSaleLineList(Integer orderSaleId);
 
 }

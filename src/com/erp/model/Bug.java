@@ -19,140 +19,123 @@ import org.hibernate.annotations.DynamicUpdate;
 @Table(name = "BUG", catalog = "ERP")
 @DynamicUpdate(true)
 @DynamicInsert(true)
-public class Bug implements java.io.Serializable
-{
-	private static final long serialVersionUID = 4645775188016310313L;
-	private Integer bugId;
-	private String bugName;
-	private String status;
-	private String attachmentUrl;
-	private String description;
-	private Date created;
-	private Date lastmod;
-	private Integer creater;
-	private Integer modifyer;
+public class Bug implements java.io.Serializable {
+    private static final long serialVersionUID = 4645775188016310313L;
+    private Integer bugId;
+    private String bugName;
+    private String status;
+    private String attachmentUrl;
+    private String description;
+    private Date created;
+    private Date lastmod;
+    private Integer creater;
+    private Integer modifyer;
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public Bug()
-	{
-	}
+    /**
+     * default constructor
+     */
+    public Bug() {
+    }
 
-	/** full constructor */
-	public Bug(String bugName, String description, Date created, Date lastmod, Integer creater,
-			Integer modifyer)
-	{
-		this.bugName = bugName;
-		this.description = description;
-		this.created = created;
-		this.lastmod = lastmod;
-		this.creater = creater;
-		this.modifyer = modifyer;
-	}
+    /**
+     * full constructor
+     */
+    public Bug(String bugName, String description, Date created, Date lastmod, Integer creater,
+               Integer modifyer) {
+        this.bugName = bugName;
+        this.description = description;
+        this.created = created;
+        this.lastmod = lastmod;
+        this.creater = creater;
+        this.modifyer = modifyer;
+    }
 
-	// Property accessors
-	@Id
-	@GeneratedValue
-	@Column(name = "BUG_ID", unique = true, nullable = false)
-	public Integer getBugId()
-	{
-		return this.bugId;
-	}
+    // Property accessors
+    @Id
+    @GeneratedValue
+    @Column(name = "BUG_ID", unique = true, nullable = false)
+    public Integer getBugId() {
+        return this.bugId;
+    }
 
-	public void setBugId(Integer bugId )
-	{
-		this.bugId = bugId;
-	}
+    public void setBugId(Integer bugId) {
+        this.bugId = bugId;
+    }
 
-	@Column(name = "BUG_NAME", length = 300)
-	public String getBugName()
-	{
-		return this.bugName;
-	}
+    @Column(name = "BUG_NAME", length = 300)
+    public String getBugName() {
+        return this.bugName;
+    }
 
-	public void setBugName(String bugName )
-	{
-		this.bugName = bugName;
-	}
-	
-	@Column(name = "ATTACHMENT_URL", length = 300)
-	public String getAttachmentUrl()
-	{
-		return attachmentUrl;
-	}
+    public void setBugName(String bugName) {
+        this.bugName = bugName;
+    }
 
-	public void setAttachmentUrl(String attachmentUrl )
-	{
-		this.attachmentUrl = attachmentUrl;
-	}
+    @Column(name = "ATTACHMENT_URL", length = 300)
+    public String getAttachmentUrl() {
+        return attachmentUrl;
+    }
 
-	@Column(name = "STATUS", nullable = false, length = 1)
-	public String getStatus()
-	{
-		return this.status;
-	}
+    public void setAttachmentUrl(String attachmentUrl) {
+        this.attachmentUrl = attachmentUrl;
+    }
 
-	public void setStatus(String status )
-	{
-		this.status = status;
-	}
-	
-	@Column(name = "DESCRIPTION", length = 2000)
-	public String getDescription()
-	{
-		return this.description;
-	}
+    @Column(name = "STATUS", nullable = false, length = 1)
+    public String getStatus() {
+        return this.status;
+    }
 
-	public void setDescription(String description )
-	{
-		this.description = description;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATED", length = 10)
-	public Date getCreated()
-	{
-		return this.created;
-	}
+    @Column(name = "DESCRIPTION", length = 2000)
+    public String getDescription() {
+        return this.description;
+    }
 
-	public void setCreated(Date created )
-	{
-		this.created = created;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LASTMOD", length = 10)
-	public Date getLastmod()
-	{
-		return this.lastmod;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "CREATED", length = 10)
+    public Date getCreated() {
+        return this.created;
+    }
 
-	public void setLastmod(Date lastmod )
-	{
-		this.lastmod = lastmod;
-	}
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 
-	@Column(name = "CREATER")
-	public Integer getCreater()
-	{
-		return this.creater;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "LASTMOD", length = 10)
+    public Date getLastmod() {
+        return this.lastmod;
+    }
 
-	public void setCreater(Integer creater )
-	{
-		this.creater = creater;
-	}
+    public void setLastmod(Date lastmod) {
+        this.lastmod = lastmod;
+    }
 
-	@Column(name = "MODIFYER")
-	public Integer getModifyer()
-	{
-		return this.modifyer;
-	}
+    @Column(name = "CREATER")
+    public Integer getCreater() {
+        return this.creater;
+    }
 
-	public void setModifyer(Integer modifyer )
-	{
-		this.modifyer = modifyer;
-	}
+    public void setCreater(Integer creater) {
+        this.creater = creater;
+    }
+
+    @Column(name = "MODIFYER")
+    public Integer getModifyer() {
+        return this.modifyer;
+    }
+
+    public void setModifyer(Integer modifyer) {
+        this.modifyer = modifyer;
+    }
 
 }

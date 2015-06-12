@@ -8,21 +8,20 @@ import com.erp.model.Project;
 import com.erp.model.ProjectFollow;
 import com.erp.util.PageUtil;
 
-public interface ProjectService
-{
+public interface ProjectService {
 
-	boolean delProject(Integer projectId );
+    boolean delProject(Integer projectId);
 
-	List<Project> findProjectList(Map<String, Object> param, PageUtil pageUtil );
+    List<Project> findProjectList(Map<String, Object> param, PageUtil pageUtil);
 
-	Long getCount(Map<String, Object> param, PageUtil pageUtil );
+    Long getCount(Map<String, Object> param, PageUtil pageUtil);
 
-	boolean persistenceProject(Project p, Map<String, List<ProjectFollow>> map );
+    boolean persistenceProject(Project p, Map<String, List<ProjectFollow>> map);
 
-	List<ProjectFollow> findProjectFollowsList(Integer projectId );
+    List<ProjectFollow> findProjectFollowsList(Integer projectId);
 
-	List<Customer> findCustomers();
+    List<Customer> findCustomers();
 
-	List<Project> findProjectListCombobox();
+    List<Project> findProjectListCombobox();
 
 }

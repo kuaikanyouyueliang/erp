@@ -1,11 +1,11 @@
-/**   
-* @Title: BaseService.java TODO:
-* @Package com.erp.service
-* @Description: TODO
-* @author chenguang 
-* @date 2013-4-19 下午03:18:05
-* @version V1.0   
-*/
+/**
+ * @Title: BaseService.java TODO:
+ * @Package com.erp.service
+ * @Description: TODO
+ * @author chenguang
+ * @date 2013-4-19 下午03:18:05
+ * @version V1.0
+ */
 package com.erp.service;
 
 /**
@@ -16,11 +16,11 @@ package com.erp.service;
  * <p>Description:福产流通科技</p>
  * <p>Copyright: Copyright (c) 2012</p>
  * <p>Company:福产流通科技</p>
+ *
  * @author shouyin 756514656@qq.com
- * @date 2013-4-19 下午03:18:05
  * @version V1.0
+ * @date 2013-4-19 下午03:18:05
  */
-public interface BaseService
-{
+public interface BaseService {
 
 }

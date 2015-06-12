@@ -6,13 +6,12 @@ import com.erp.model.City;
 import com.erp.model.Province;
 import com.erp.viewModel.TreeModel;
 
-public interface AreaService
-{
+public interface AreaService {
 
-	List<TreeModel> findCities();
+    List<TreeModel> findCities();
 
-	List<Province> findProvinces();
+    List<Province> findProvinces();
 
-	boolean addCities(City city );
+    boolean addCities(City city);
 
 }

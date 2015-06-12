@@ -19,215 +19,187 @@ import org.hibernate.annotations.DynamicUpdate;
 @Table(name = "SYSTEM_CODE", catalog = "ERP")
 @DynamicUpdate(true)
 @DynamicInsert(true)
-public class SystemCode implements java.io.Serializable
-{
-	private static final long serialVersionUID = -5522136453981132093L;
-	private Integer codeId;
-	private String codeMyid;
-	private String name;
-	private Integer sort;
-	private String iconCls;
-	private String state;
-	private String type;
-	private Integer parentId;
-	private Integer permissionId;
-	private String description;
-	private String status;
-	private Date created;
-	private Date lastmod;
-	private Integer creater;
-	private Integer modifyer;
+public class SystemCode implements java.io.Serializable {
+    private static final long serialVersionUID = -5522136453981132093L;
+    private Integer codeId;
+    private String codeMyid;
+    private String name;
+    private Integer sort;
+    private String iconCls;
+    private String state;
+    private String type;
+    private Integer parentId;
+    private Integer permissionId;
+    private String description;
+    private String status;
+    private Date created;
+    private Date lastmod;
+    private Integer creater;
+    private Integer modifyer;
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public SystemCode()
-	{
-	}
+    /**
+     * default constructor
+     */
+    public SystemCode() {
+    }
 
-	/** full constructor */
-	public SystemCode(String codeMyid, String name, Integer sort, Integer parentId,
-			String description, String status, Date created, Date lastmod, Integer creater,
-			Integer modifyer)
-	{
-		this.codeMyid = codeMyid;
-		this.name = name;
-		this.sort = sort;
-		this.parentId = parentId;
-		this.description = description;
-		this.status = status;
-		this.created = created;
-		this.lastmod = lastmod;
-		this.creater = creater;
-		this.modifyer = modifyer;
-	}
+    /**
+     * full constructor
+     */
+    public SystemCode(String codeMyid, String name, Integer sort, Integer parentId,
+                      String description, String status, Date created, Date lastmod, Integer creater,
+                      Integer modifyer) {
+        this.codeMyid = codeMyid;
+        this.name = name;
+        this.sort = sort;
+        this.parentId = parentId;
+        this.description = description;
+        this.status = status;
+        this.created = created;
+        this.lastmod = lastmod;
+        this.creater = creater;
+        this.modifyer = modifyer;
+    }
 
-	// Property accessors
-	@Id
-	@GeneratedValue
-	@Column(name = "CODE_ID", unique = true, nullable = false)
-	public Integer getCodeId()
-	{
-		return this.codeId;
-	}
+    // Property accessors
+    @Id
+    @GeneratedValue
+    @Column(name = "CODE_ID", unique = true, nullable = false)
+    public Integer getCodeId() {
+        return this.codeId;
+    }
 
-	public void setCodeId(Integer codeId )
-	{
-		this.codeId = codeId;
-	}
+    public void setCodeId(Integer codeId) {
+        this.codeId = codeId;
+    }
 
-	@Column(name = "CODE_MYID", length = 100)
-	public String getCodeMyid()
-	{
-		return this.codeMyid;
-	}
+    @Column(name = "CODE_MYID", length = 100)
+    public String getCodeMyid() {
+        return this.codeMyid;
+    }
 
-	public void setCodeMyid(String codeMyid )
-	{
-		this.codeMyid = codeMyid;
-	}
+    public void setCodeMyid(String codeMyid) {
+        this.codeMyid = codeMyid;
+    }
 
-	@Column(name = "NAME")
-	public String getName()
-	{
-		return this.name;
-	}
+    @Column(name = "NAME")
+    public String getName() {
+        return this.name;
+    }
 
-	public void setName(String name )
-	{
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	@Column(name = "SORT")
-	public Integer getSort()
-	{
-		return this.sort;
-	}
+    @Column(name = "SORT")
+    public Integer getSort() {
+        return this.sort;
+    }
 
-	public void setSort(Integer sort )
-	{
-		this.sort = sort;
-	}
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
 
-	@Column(name = "PARENT_ID")
-	public Integer getParentId()
-	{
-		return this.parentId;
-	}
+    @Column(name = "PARENT_ID")
+    public Integer getParentId() {
+        return this.parentId;
+    }
 
-	public void setParentId(Integer parentId )
-	{
-		this.parentId = parentId;
-	}
-	
-	@Column(name = "PERMISSIONID")
-	public Integer getPermissionId()
-	{
-		return permissionId;
-	}
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
 
-	public void setPermissionId(Integer permissionId )
-	{
-		this.permissionId = permissionId;
-	}
+    @Column(name = "PERMISSIONID")
+    public Integer getPermissionId() {
+        return permissionId;
+    }
 
-	@Column(name = "DESCRIPTION", length = 2000)
-	public String getDescription()
-	{
-		return this.description;
-	}
+    public void setPermissionId(Integer permissionId) {
+        this.permissionId = permissionId;
+    }
 
-	public void setDescription(String description )
-	{
-		this.description = description;
-	}
+    @Column(name = "DESCRIPTION", length = 2000)
+    public String getDescription() {
+        return this.description;
+    }
 
-	@Column(name = "STATUS", length = 1)
-	public String getStatus()
-	{
-		return this.status;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setStatus(String status )
-	{
-		this.status = status;
-	}
-	
-	@Column(name = "TYPE", length = 1)
-	public String getType()
-	{
-		return type;
-	}
+    @Column(name = "STATUS", length = 1)
+    public String getStatus() {
+        return this.status;
+    }
 
-	public void setType(String type )
-	{
-		this.type = type;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATED", length = 10)
-	public Date getCreated()
-	{
-		return this.created;
-	}
+    @Column(name = "TYPE", length = 1)
+    public String getType() {
+        return type;
+    }
 
-	public void setCreated(Date created )
-	{
-		this.created = created;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LASTMOD", length = 10)
-	public Date getLastmod()
-	{
-		return this.lastmod;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "CREATED", length = 10)
+    public Date getCreated() {
+        return this.created;
+    }
 
-	public void setLastmod(Date lastmod )
-	{
-		this.lastmod = lastmod;
-	}
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 
-	@Column(name = "CREATER")
-	public Integer getCreater()
-	{
-		return this.creater;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "LASTMOD", length = 10)
+    public Date getLastmod() {
+        return this.lastmod;
+    }
 
-	public void setCreater(Integer creater )
-	{
-		this.creater = creater;
-	}
+    public void setLastmod(Date lastmod) {
+        this.lastmod = lastmod;
+    }
 
-	@Column(name = "MODIFYER")
-	public Integer getModifyer()
-	{
-		return this.modifyer;
-	}
+    @Column(name = "CREATER")
+    public Integer getCreater() {
+        return this.creater;
+    }
 
-	public void setModifyer(Integer modifyer )
-	{
-		this.modifyer = modifyer;
-	}
-	
-	@Column(name = "STATE",length = 20)
-	public String getState()
-	{
-		return this.state;
-	}
+    public void setCreater(Integer creater) {
+        this.creater = creater;
+    }
 
-	public void setState(String state )
-	{
-		this.state = state;
-	}
-	
-	@Column(name = "ICONCLS", length = 100)
-	public String getIconCls()
-	{
-		return iconCls;
-	}
-	public void setIconCls(String iconCls )
-	{
-		this.iconCls = iconCls;
-	}
+    @Column(name = "MODIFYER")
+    public Integer getModifyer() {
+        return this.modifyer;
+    }
+
+    public void setModifyer(Integer modifyer) {
+        this.modifyer = modifyer;
+    }
+
+    @Column(name = "STATE", length = 20)
+    public String getState() {
+        return this.state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Column(name = "ICONCLS", length = 100)
+    public String getIconCls() {
+        return iconCls;
+    }
+
+    public void setIconCls(String iconCls) {
+        this.iconCls = iconCls;
+    }
 }

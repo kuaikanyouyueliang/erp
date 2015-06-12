@@ -13,11 +13,11 @@ import com.erp.viewModel.MenuModel;
  * <p>Description:福产流通科技</p>
  * <p>Copyright: Copyright (c) 2012</p>
  * <p>Company:福产流通科技</p>
+ *
  * @author shouyin 756514656@qq.com
- * @date 2013-4-19 下午03:20:49
  * @version V1.0
+ * @date 2013-4-19 下午03:20:49
  */
-public interface LoginService 
-{
-	List<MenuModel> findMenuList();
+public interface LoginService {
+    List<MenuModel> findMenuList();
 }

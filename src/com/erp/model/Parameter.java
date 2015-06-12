@@ -19,204 +19,177 @@ import org.hibernate.annotations.DynamicUpdate;
 @Table(name = "PARAMETER", catalog = "ERP")
 @DynamicUpdate(true)
 @DynamicInsert(true)
-public class Parameter implements java.io.Serializable
-{
-	private static final long serialVersionUID = -7676187590856494738L;
-	private Integer parameterId;
-	private String myid;
-	private String name;
-	private String value;
-	private String description;
-	private String group;
-	private String state;
-	private String status;
-	private String editorType;
-	private String editor;
-	private Date created;
-	private Date lastmod;
-	private Integer creater;
-	private Integer modifyer;
+public class Parameter implements java.io.Serializable {
+    private static final long serialVersionUID = -7676187590856494738L;
+    private Integer parameterId;
+    private String myid;
+    private String name;
+    private String value;
+    private String description;
+    private String group;
+    private String state;
+    private String status;
+    private String editorType;
+    private String editor;
+    private Date created;
+    private Date lastmod;
+    private Integer creater;
+    private Integer modifyer;
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public Parameter()
-	{
-	}
+    /**
+     * default constructor
+     */
+    public Parameter() {
+    }
 
-	/** full constructor */
-	public Parameter(String myid, String name, String value, String description, String status,
-			Date created, Date lastmod, Integer creater, Integer modifyer)
-	{
-		this.myid = myid;
-		this.name = name;
-		this.value = value;
-		this.description = description;
-		this.status = status;
-		this.created = created;
-		this.lastmod = lastmod;
-		this.creater = creater;
-		this.modifyer = modifyer;
-	}
+    /**
+     * full constructor
+     */
+    public Parameter(String myid, String name, String value, String description, String status,
+                     Date created, Date lastmod, Integer creater, Integer modifyer) {
+        this.myid = myid;
+        this.name = name;
+        this.value = value;
+        this.description = description;
+        this.status = status;
+        this.created = created;
+        this.lastmod = lastmod;
+        this.creater = creater;
+        this.modifyer = modifyer;
+    }
 
-	// Property accessors
-	@Id
-	@GeneratedValue
-	@Column(name = "PARAMETER_ID", unique = true, nullable = false)
-	public Integer getParameterId()
-	{
-		return this.parameterId;
-	}
+    // Property accessors
+    @Id
+    @GeneratedValue
+    @Column(name = "PARAMETER_ID", unique = true, nullable = false)
+    public Integer getParameterId() {
+        return this.parameterId;
+    }
 
-	public void setParameterId(Integer parameterId )
-	{
-		this.parameterId = parameterId;
-	}
+    public void setParameterId(Integer parameterId) {
+        this.parameterId = parameterId;
+    }
 
-	@Column(name = "MYID", length = 55)
-	public String getMyid()
-	{
-		return this.myid;
-	}
+    @Column(name = "MYID", length = 55)
+    public String getMyid() {
+        return this.myid;
+    }
 
-	public void setMyid(String myid )
-	{
-		this.myid = myid;
-	}
+    public void setMyid(String myid) {
+        this.myid = myid;
+    }
 
-	@Column(name = "NAME", length = 100)
-	public String getName()
-	{
-		return this.name;
-	}
+    @Column(name = "NAME", length = 100)
+    public String getName() {
+        return this.name;
+    }
 
-	public void setName(String name )
-	{
-		this.name = name;
-	}
-	@Column(name = "EDITOR_TYPE", length = 100)
-	public String getEditorType()
-	{
-		return editorType;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setEditorType(String editorType )
-	{
-		this.editorType = editorType;
-	}
-	
-	@Column(name = "EDITOR", length = 100)
-	public String getEditor()
-	{
-		return editor;
-	}
+    @Column(name = "EDITOR_TYPE", length = 100)
+    public String getEditorType() {
+        return editorType;
+    }
 
-	public void setEditor(String editor )
-	{
-		this.editor = editor;
-	}
+    public void setEditorType(String editorType) {
+        this.editorType = editorType;
+    }
 
-	@Column(name = "VALUE")
-	public String getValue()
-	{
-		return this.value;
-	}
+    @Column(name = "EDITOR", length = 100)
+    public String getEditor() {
+        return editor;
+    }
 
-	
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
 
-	public void setValue(String value )
-	{
-		this.value = value;
-	}
+    @Column(name = "VALUE")
+    public String getValue() {
+        return this.value;
+    }
 
-	@Column(name = "DESCRIPTION", length = 2000)
-	public String getDescription()
-	{
-		return this.description;
-	}
 
-	public void setDescription(String description )
-	{
-		this.description = description;
-	}
-	
-	@Column(name = "GROUP_TYPE", length = 55)
-	public String getGroup()
-	{
-		return group;
-	}
+    public void setValue(String value) {
+        this.value = value;
+    }
 
-	public void setGroup(String group )
-	{
-		this.group = group;
-	}
+    @Column(name = "DESCRIPTION", length = 2000)
+    public String getDescription() {
+        return this.description;
+    }
 
-	@Column(name = "STATE", length = 1)
-	public String getState()
-	{
-		return state;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setState(String state )
-	{
-		this.state = state;
-	}
+    @Column(name = "GROUP_TYPE", length = 55)
+    public String getGroup() {
+        return group;
+    }
 
-	@Column(name = "STATUS", length = 1)
-	public String getStatus()
-	{
-		return this.status;
-	}
+    public void setGroup(String group) {
+        this.group = group;
+    }
 
-	public void setStatus(String status )
-	{
-		this.status = status;
-	}
+    @Column(name = "STATE", length = 1)
+    public String getState() {
+        return state;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATED", length = 10)
-	public Date getCreated()
-	{
-		return this.created;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public void setCreated(Date created )
-	{
-		this.created = created;
-	}
+    @Column(name = "STATUS", length = 1)
+    public String getStatus() {
+        return this.status;
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LASTMOD", length = 10)
-	public Date getLastmod()
-	{
-		return this.lastmod;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	public void setLastmod(Date lastmod )
-	{
-		this.lastmod = lastmod;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "CREATED", length = 10)
+    public Date getCreated() {
+        return this.created;
+    }
 
-	@Column(name = "CREATER")
-	public Integer getCreater()
-	{
-		return this.creater;
-	}
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 
-	public void setCreater(Integer creater )
-	{
-		this.creater = creater;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "LASTMOD", length = 10)
+    public Date getLastmod() {
+        return this.lastmod;
+    }
 
-	@Column(name = "MODIFYER")
-	public Integer getModifyer()
-	{
-		return this.modifyer;
-	}
+    public void setLastmod(Date lastmod) {
+        this.lastmod = lastmod;
+    }
 
-	public void setModifyer(Integer modifyer )
-	{
-		this.modifyer = modifyer;
-	}
+    @Column(name = "CREATER")
+    public Integer getCreater() {
+        return this.creater;
+    }
+
+    public void setCreater(Integer creater) {
+        this.creater = creater;
+    }
+
+    @Column(name = "MODIFYER")
+    public Integer getModifyer() {
+        return this.modifyer;
+    }
+
+    public void setModifyer(Integer modifyer) {
+        this.modifyer = modifyer;
+    }
 
 }

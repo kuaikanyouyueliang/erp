@@ -4,9 +4,8 @@ import java.util.List;
 
 import com.erp.model.Currency;
 
-public interface CurrencyService
-{
+public interface CurrencyService {
 
-	List<Currency> findCurrencyList();
+    List<Currency> findCurrencyList();
 
 }

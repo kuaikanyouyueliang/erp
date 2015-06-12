@@ -7,21 +7,20 @@ import com.erp.model.Users;
 import com.erp.util.PageUtil;
 import com.erp.viewModel.UserRoleModel;
 
-public interface UserService
-{
+public interface UserService {
 
-	boolean persistenceUsers(Map<String, List<Users>> map );
+    boolean persistenceUsers(Map<String, List<Users>> map);
 
-	List<Users> findAllUserList(Map<String, Object> map, PageUtil pageUtil);
+    List<Users> findAllUserList(Map<String, Object> map, PageUtil pageUtil);
 
-	Long getCount(Map<String, Object> map , PageUtil pageUtil);
+    Long getCount(Map<String, Object> map, PageUtil pageUtil);
 
-	List<UserRoleModel> findUsersRolesList(Integer userId );
+    List<UserRoleModel> findUsersRolesList(Integer userId);
 
-	boolean saveUserRoles(Integer userId, String isCheckedIds );
+    boolean saveUserRoles(Integer userId, String isCheckedIds);
 
-	boolean persistenceUsers(Users u );
+    boolean persistenceUsers(Users u);
 
-	boolean delUsers(Integer userId );
+    boolean delUsers(Integer userId);
 
 }

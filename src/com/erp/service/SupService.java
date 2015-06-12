@@ -7,19 +7,18 @@ import com.erp.model.Suplier;
 import com.erp.model.SuplierContact;
 import com.erp.util.PageUtil;
 
-public interface SupService
-{
+public interface SupService {
 
-	List<Suplier> findSuplierList(Map<String, Object> param, PageUtil pageUtil );
+    List<Suplier> findSuplierList(Map<String, Object> param, PageUtil pageUtil);
 
-	Long getCount(Map<String, Object> param, PageUtil pageUtil );
+    Long getCount(Map<String, Object> param, PageUtil pageUtil);
 
-	boolean persistenceSuplier(Suplier c, Map<String, List<SuplierContact>> map );
+    boolean persistenceSuplier(Suplier c, Map<String, List<SuplierContact>> map);
 
-	boolean delSuplier(Integer SuplierId );
+    boolean delSuplier(Integer SuplierId);
 
-	List<SuplierContact> findSuplierContactList(Integer SuplierId );
+    List<SuplierContact> findSuplierContactList(Integer SuplierId);
 
-	List<Suplier> findSuplierListNoPage(Map<String, Object> param, PageUtil pageUtil );
+    List<Suplier> findSuplierListNoPage(Map<String, Object> param, PageUtil pageUtil);
 
 }

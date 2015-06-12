@@ -7,21 +7,20 @@ import com.erp.model.Brand;
 import com.erp.model.Item;
 import com.erp.util.PageUtil;
 
-public interface ItemService
-{
+public interface ItemService {
 
-	List<Item> findItemList(Map<String, Object> param, PageUtil pageUtil );
+    List<Item> findItemList(Map<String, Object> param, PageUtil pageUtil);
 
-	Long getCount(Map<String, Object> param, PageUtil pageUtil );
+    Long getCount(Map<String, Object> param, PageUtil pageUtil);
 
-	boolean persistenceItem(Item item );
+    boolean persistenceItem(Item item);
 
-	boolean delItem(Integer itemId );
+    boolean delItem(Integer itemId);
 
-	List<Brand> findBrandList();
+    List<Brand> findBrandList();
 
-	boolean addBrands(String name );
+    boolean addBrands(String name);
 
-	Item findItemByMyid(String myid, Integer suplierId );
+    Item findItemByMyid(String myid, Integer suplierId);
 
 }
